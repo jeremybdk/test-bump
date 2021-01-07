@@ -13,6 +13,7 @@ jobs:
         uses: mathieudutour/github-tag-action@v5.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          custom_release_rules: chore:patch
       - name: Create a GitHub release
         uses: actions/create-release@v1
         env:
